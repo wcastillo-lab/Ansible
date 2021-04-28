@@ -1,0 +1,13 @@
+---
+- name: create user accounts for all our servers
+  hosts: dbserver
+  become: True
+  remote_user: root
+  vars_files:
+    - "{{env}}_secret.yml" 
+  tasks:
+    - name: Creating user from secret.yml
+      user:
+        name: "{{ username }}"
+        password: "{{ pwhash | password_hash('sha512') }}"
+ 
