@@ -1,0 +1,11 @@
+---
+- name: Creating user from secret.yml
+  user:
+     name: "{{ item.name}}"
+     groups: root
+     password: "{{ item.password }}"
+         
+  with_items:
+     - name: svapache
+       password: "{{pwd1}}"
+
