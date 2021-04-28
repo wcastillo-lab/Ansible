@@ -1,0 +1,7 @@
+---
+- hosts: dbserver
+  remote_user: root
+  vars_files:
+    - "{{env}}_secret.yml" 
+  roles:
+          - role: apache2

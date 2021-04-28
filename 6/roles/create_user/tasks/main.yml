@@ -1,0 +1,17 @@
+---
+- name: Creating user from secret.yml
+  user:
+     name: "{{ item.name}}"
+     groups: root
+     password: "{{ item.password }}"
+         
+  with_items:
+     - name: wcast1
+       password: "{{pwd1}}"
+     - name: wcast2
+       password: "{{pwd2}}"
+
+- name: install vim
+  apt:
+     name: vim
+     state: present

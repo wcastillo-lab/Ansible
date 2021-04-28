@@ -1,0 +1,7 @@
+[webserver]
+host1
+[dbserver]
+host2
+
+[all:vars]
+env="int"
