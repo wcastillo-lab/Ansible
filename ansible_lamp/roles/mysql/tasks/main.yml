@@ -1,0 +1,14 @@
+---
+- name: install php
+  apt:
+     name: mysql
+     state: present
+  when:
+     - ansible_facts['distribution'] == 'Ubuntu'
+     - ansible_facts['distribution_version'] ==  '18.04'
+
+  register: resume
+ 
+- name: verif install
+  debug:
+     msg: "{{resume}}"
