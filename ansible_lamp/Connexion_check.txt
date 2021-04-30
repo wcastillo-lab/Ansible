@@ -1,0 +1,10 @@
+Grace à la commande ansible j'ai copié un fichier depuis ma machine azure vers mes hosts (host_web et host_db)
+
+voici la commande 
+	ansible all -i 'target,' -m shell -a "echo hello world\! > testfile"
+
+voici le retour 
+	host_web | CHANGED | rc=0 >>
+
+	host_db | CHANGED | rc=0 >>
+

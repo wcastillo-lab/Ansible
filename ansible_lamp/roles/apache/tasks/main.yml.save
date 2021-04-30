@@ -1,0 +1,23 @@
+---
+- name: install apache2
+  apt:
+     name: apache2
+     state: present
+
+- name: restart apache2 
+  #command: service apache2 start
+  service:
+     name: apache2
+     state: started
+  register: resume
+
+  #- name: status apache2
+  #command: service apache2 status
+
+- name: status service
+  debug:
+     msg: "{{resume}}"
+
+- name:
+  copy:
+     src: 'index.html.j2'

@@ -1,0 +1,12 @@
+---
+- name: install php
+  apt:
+     name: php
+     state: present
+  when:
+     - ansible_facts['distribution'] == 'Ubuntu'
+     - ansible_facts['distribution_version'] ==  '18.04'
+
+- name: 
+  copy
+

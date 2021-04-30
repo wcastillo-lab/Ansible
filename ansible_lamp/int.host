@@ -1,0 +1,10 @@
+[webserver]
+host_web
+
+[dbserver]
+host_db
+
+
+[all:vars]
+env="int"
+createur="Castillo"

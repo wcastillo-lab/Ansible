@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title> WEBSITE SDV TEST ANDLERS</title>
+	</head>
+	<body>
+		{% if env == "dev" %}
+		<p>Welcome on development's SUP TEST HANDLESRS encore un de Vinci Website, created by {{createur}} !.</p>
+		{% elif env == "int" %}
+                <p>Welcome on integration's Sup de Vinci Website, created by {{createur}} !.</p>
+		{% else %}
+                <p>Welcome on Website, created by {{createur}} !.</p>
+
+		{% endif %}
+
+	</body>
+</html>

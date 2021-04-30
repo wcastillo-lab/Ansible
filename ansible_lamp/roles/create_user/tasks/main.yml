@@ -1,0 +1,14 @@
+---
+- name: Creating user system 
+  user:
+     name: "{{ item.name}}"
+     uid: 765
+         
+  with_items:
+     - name: svuser
+  register: resume
+
+
+- name: check for Creating user from
+  debug:
+     msg: "{{resume}}"
